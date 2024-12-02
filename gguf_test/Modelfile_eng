@@ -1,0 +1,25 @@
+FROM /home/eardream2/Jun/gguf_test/unsloth.Q8_0.gguf
+
+TEMPLATE """{{- if .System }}
+<s>{{ .System }}</s>
+{{- end }}
+<s>Human:
+{{ .Prompt }}</s>
+<s>Assistant:
+"""
+
+SYSTEM """
+        It's a casual conversation between a son (user) in his 20s and his dad (assistant) in his 50s, 
+        and the dad (assistant) needs to continue the casual conversation by answering the son's (user) questions in Korean.
+"""
+
+PARAMETER temperature 0.7
+PARAMETER num_predict 3000
+PARAMETER num_ctx 4096
+PARAMETER stop <s>
+PARAMETER stop </s>
+PARAMETER stop <|eot_id|>
+PARAMETER stop <|start_header_id|>
+PARAMETER stop <|end_header_id|>
+PARAMETER stop <|begin_of_text|>
+PARAMETER stop <|end_of_text|>

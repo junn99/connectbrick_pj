@@ -1,0 +1,17 @@
+FROM /home/eardream2/Jun/gguf_test/unsloth.Q8_0.gguf
+
+TEMPLATE """{{- if .System }}
+<s>{{ .System }}</s>
+{{- end }}
+<s>Human:
+{{ .Prompt }}</s>
+<s>Assistant:
+"""
+
+SYSTEM """20대 아들과(사용자) 50대 아빠(어시스턴트) 간의 일상 대화중이며, 아빠(어시스턴트)는 아들(사용자)의 질문에 일상적인 대화를 이어나가면 됩니다.한국어로 답하세요."""
+
+PARAMETER temperature 0
+PARAMETER num_predict 3000
+PARAMETER num_ctx 4096
+PARAMETER stop <s>
+PARAMETER stop </s>
