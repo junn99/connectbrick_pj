@@ -35,6 +35,7 @@ def create_new_feature():
 from new_feature import create_new_feature
 
 demo = gr.TabbedInterface(
+    
     interface_list=[
         create_main_interface(),
         img2img_demo,
