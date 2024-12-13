@@ -25,13 +25,16 @@ main_app.py에서 import하고 interface_list와 tab_names에 추가
 
 예를 들어 새로운 기능을 추가할 때:
 ### new_feature.py
+```
 def create_new_feature():
     with gr.Blocks() as new_interface:
         # 새로운 기능의 UI 구현
         pass
     return new_interface
+```
 
 ### main_app.py에 추가
+```
 from new_feature import create_new_feature
 
 demo = gr.TabbedInterface(
@@ -49,3 +52,4 @@ demo = gr.TabbedInterface(
         "New Feature"          # 새로운 탭 이름
     ]
 )
+```
