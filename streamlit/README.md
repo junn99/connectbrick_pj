@@ -1,4 +1,6 @@
-Streamlit을 사용하여 웹 브라우저 상에서 대화형 챗봇을 구현하며,  `beomi/Llama-3-Open-Ko-8B` 모델을 파인튜닝하여 만든 `junn991/llama3-8b-1gpu-couple` 모델을 API로 활용함.
+Streamlit을 사용하여 웹 브라우저 상에서 대화형 챗봇을 구현하며,  
+
+`beomi/Llama-3-Open-Ko-8B` 모델을 파인튜닝하여 만든 `junn991/llama3-8b-1gpu-couple` 모델을 API로 활용함.
 
 ---
 
